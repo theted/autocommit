@@ -8,7 +8,9 @@ A tool that automatically commits changes to git at regular intervals. Designed 
 - Each file is committed individually with a simple commit message
 - Configurable through command-line options or a configuration file
 - Ignores common files and directories by default (node_modules, .git, etc.)
-- Includes a comprehensive .gitignore file for Node.js projects
+- Includes a comprehensive .gitignore file by default
+- Works with all types of text files, not just Node.js projects
+- Note: Binary files are not ideal for this type of version control as they can't be properly diff'ed or merged
 
 ## Installation
 
