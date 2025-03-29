@@ -6,8 +6,6 @@ import { program } from "commander";
 import { readFile, writeFile } from "fs/promises";
 import { existsSync } from "fs";
 import { join, relative } from "path";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
 
 // Default configuration
 const DEFAULT_CONFIG = {
