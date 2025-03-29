@@ -2,6 +2,8 @@
 
 A tool that automatically commits changes to git at regular intervals. Designed primarily for students to maintain a clear version history of their work, which can help demonstrate the progression of their projects and provide evidence against allegations of AI use.
 
+**GitHub Repository:** [https://github.com/theted/autocommit](https://github.com/theted/autocommit)
+
 ## Features
 
 - Automatically commits changes at regular intervals (default: 2 minutes)
@@ -20,7 +22,7 @@ To install the package globally, which allows you to use the `autocommit` comman
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/autocommit.git
+git clone https://github.com/theted/autocommit.git
 
 # Navigate to the directory
 cd autocommit
