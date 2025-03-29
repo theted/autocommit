@@ -9,6 +9,7 @@ Using this tool may significantly clutter your git commit history for the follow
 3. **No logical grouping**: Related changes across multiple files will be split into separate commits, making it difficult to understand the development progression.
 4. **Difficult code review**: The granular nature of commits makes pull request reviews challenging as logical changes are fragmented.
 5. **Complicates git operations**: Operations like bisect, revert, cherry-pick, and squashing become more difficult with a cluttered history.
+6. **Commits include bugs**: Since the tool automatically commits the current state at regular intervals, it will also commit any freshly introduced bugs or broken code, making your commit history include non-working states.
 
 **Recommended Use Cases:**
 
