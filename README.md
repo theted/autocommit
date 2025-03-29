@@ -1,3 +1,30 @@
+# ⚠️ WARNING: THIS IS NOT INTENDED FOR PRODUCTION WORK! ⚠️
+
+## ⚠️ Commit History Warning ⚠️
+
+Using this tool may significantly clutter your git commit history for the following reasons:
+
+1. **High commit volume**: Each file is committed individually, potentially creating hundreds of commits in a single work session.
+2. **Generic commit messages**: All commits use the simple format "Updated {filename}" without meaningful context about what changed.
+3. **No logical grouping**: Related changes across multiple files will be split into separate commits, making it difficult to understand the development progression.
+4. **Difficult code review**: The granular nature of commits makes pull request reviews challenging as logical changes are fragmented.
+5. **Complicates git operations**: Operations like bisect, revert, cherry-pick, and squashing become more difficult with a cluttered history.
+
+**Recommended Use Cases:**
+
+- Student projects where maintaining a detailed history is more important than a clean commit log
+- Solo projects where you want automatic version control without manual commits
+- Learning environments where tracking incremental changes is beneficial
+
+**Not Recommended For:**
+
+- Professional or production codebases
+- Collaborative team projects
+- Open source contributions
+- Any repository where a clean, meaningful commit history is important
+
+Consider using conventional git workflows with meaningful commits for professional work.
+
 # Autocommit
 
 A tool that automatically commits changes to git at regular intervals. Designed primarily for students to maintain a clear version history of their work, which can help demonstrate the progression of their projects and provide evidence against allegations of AI use.
@@ -103,6 +130,9 @@ The `interval` is specified in milliseconds (2 minutes = 120000ms).
 2. When a file is modified, it waits for the specified interval
 3. If no further changes are made to the file during that interval, it commits the file with the message "Updated {filename}"
 4. Each file is committed individually to maintain a clear history
+5. All commits are made to the currently checked out branch - the tool does not switch branches or create new ones
+
+> **Note on Branch Handling**: Autocommit always commits to the currently active branch in your repository. Make sure you're on the correct branch before starting the tool. If you need to work on a different branch, stop autocommit, switch branches, and then restart the tool.
 
 ## Pushing Changes to GitHub
 
