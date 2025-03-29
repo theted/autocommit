@@ -102,6 +102,27 @@ The `interval` is specified in milliseconds (2 minutes = 120000ms).
 3. If no further changes are made to the file during that interval, it commits the file with the message "Updated {filename}"
 4. Each file is committed individually to maintain a clear history
 
+## Pushing Changes to GitHub
+
+Autocommit only creates local git commits and does not automatically push these changes to remote repositories like GitHub. To make your commits visible on GitHub, you need to manually push them:
+
+```bash
+# Push all commits to the default remote branch (usually 'origin main' or 'origin master')
+git push
+
+# Or specify the remote and branch
+git push origin main
+```
+
+You can push changes whenever you want:
+
+- After each work session
+- At the end of the day
+- When you reach a milestone
+- Before sharing your work with others
+
+Regular pushing ensures your remote repository stays up-to-date with your local changes and provides an additional backup of your work.
+
 ## Requirements
 
 - Node.js 18 or higher
