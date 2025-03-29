@@ -41,6 +41,40 @@ A tool that automatically commits changes to git at regular intervals. Designed 
 - Works with all types of text files, not just Node.js projects
 - Note: Binary files are not ideal for this type of version control as they can't be properly diff'ed or merged
 
+### Text-Based vs. Binary File Formats
+
+**Binary file formats** like Microsoft Office documents (.docx, .xlsx, .pptx), PDFs, and image files (.jpg, .png) are not well-suited for version control systems like Git for several reasons:
+
+1. **No meaningful diffs**: When you change a binary file, Git can only show that the file changed but cannot display what specific content changed. This makes code reviews and history tracking nearly impossible.
+
+2. **Merge conflicts**: Binary files cannot be automatically merged when conflicts occur. If two people modify the same binary file, one person's changes will completely overwrite the other's.
+
+3. **Repository bloat**: Each version of a binary file is stored in its entirety, causing repository size to grow rapidly with each change.
+
+4. **Limited collaboration**: Without the ability to see specific changes or merge effectively, collaboration on binary files becomes challenging.
+
+**Text-based alternatives** provide significant advantages for version control:
+
+| Binary Format | Text-Based Alternative | Benefits                                                                   |
+| ------------- | ---------------------- | -------------------------------------------------------------------------- |
+| Word (.docx)  | Markdown (.md)         | Simple syntax, readable in any text editor, excellent for documentation    |
+| Word (.docx)  | LaTeX (.tex)           | Superior typesetting for academic papers, equations, and complex documents |
+| Excel (.xlsx) | CSV (.csv)             | Simple tabular data that can be diff'ed and edited in any text editor      |
+| Excel (.xlsx) | JSON/YAML (.json/.yml) | Structured data with clear version control differences                     |
+| PowerPoint    | Markdown + Reveal.js   | Presentations as code with version-controlled slides                       |
+| Photoshop     | SVG (.svg)             | Vector graphics as XML text that can be diff'ed                            |
+
+**Benefits of text-based formats for version control:**
+
+1. **Clear diffs**: See exactly what changed between versions (added/removed text, modified values)
+2. **Effective merging**: Automatically merge changes from multiple contributors
+3. **Smaller repository size**: Store only the differences between versions, not entire files
+4. **Better collaboration**: Review specific changes, resolve conflicts line-by-line
+5. **Plain text editing**: Edit with any text editor without specialized software
+6. **Automation friendly**: Parse and generate content programmatically
+
+For projects using autocommit, consider converting binary documents to text-based alternatives whenever possible to take full advantage of Git's version control capabilities.
+
 ## Installation
 
 ### Global Installation (Recommended)
